@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RaccoonReports</string>
+    <string name="appName01">Raccoon</string>
+    <string name="appName02">Reports</string>
+    <string name="AboutTheProgram">Программа для создания различных отчетов из программы \"Енот\" </string>
+</resources>
