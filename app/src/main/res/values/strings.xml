@@ -3,4 +3,7 @@
     <string name="appName01">Raccoon</string>
     <string name="appName02">Reports</string>
     <string name="AboutTheProgram">Программа для создания различных отчетов из программы \"Енот\" </string>
+
+
+    <string name="forUI">Поиск пропущенных номеров</string>
 </resources>
