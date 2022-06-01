@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.artempdn.raccoonreports.adapter.ModuleAdapter;
 import com.artempdn.raccoonreports.module.Module;
@@ -45,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         moduleAdapter = new ModuleAdapter(this,moduleList);
         recyclerView.setAdapter(moduleAdapter);
+    }
+
+    public void openSettings(View view){
+        Intent intent = new Intent(this,activity_settings.class);
+        startActivity(intent);
     }
 }

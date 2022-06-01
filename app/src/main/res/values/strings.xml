@@ -2,8 +2,14 @@
     <string name="app_name">RaccoonReports</string>
     <string name="appName01">Raccoon</string>
     <string name="appName02">Reports</string>
-    <string name="AboutTheProgram">Программа для создания различных отчетов из программы \"Енот\" </string>
+    <string name="AboutTheProgram">Программа для создания различных отчетов из программы \"еНот\" </string>
+    <string name="settings">Настройки подключения к базе данных программы \"еНот\"</string>
 
+    <string name="settingsHost">Host/IP</string>
+    <string name="settingsDataBaseName">DataBase Name</string>
+    <string name="settingsPort">Port</string>
+    <string name="settingsLogin">Login</string>
+    <string name="settingsPass">Password</string>
 
     <string name="forUI">Поиск пропущенных номеров</string>
 </resources>

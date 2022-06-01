@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="headerBackgraund">#000119</color>
     <color name="appNameRed">#F64D60</color>
+    <color name="backgraund">#F5F5F6</color>
 
 
     <color name="itemUI">#F8455A</color>
