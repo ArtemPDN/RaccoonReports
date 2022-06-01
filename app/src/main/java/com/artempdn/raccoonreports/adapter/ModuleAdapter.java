@@ -38,7 +38,7 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
     public void onBindViewHolder(@NonNull ModuleViewHolder holder, int position) {
         int color = Color.parseColor(moduleViewHolderList.get(position).getColorBG());
         holder.linearLayout.setBackgroundColor(color);
-
+        holder.textViewDepartment.setText(moduleViewHolderList.get(position).getStrDepartment());
         holder.textViewTitle.setText(moduleViewHolderList.get(position).getStrTitle());
         int imageId = context.getResources().getIdentifier("ic_" + moduleViewHolderList.get(position).getStrNameImage(),"drawable",context.getPackageName());
         holder.imageIcon.setImageResource(imageId);
@@ -52,13 +52,14 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
     public static final class ModuleViewHolder extends RecyclerView.ViewHolder{
 
         LinearLayout linearLayout;
-        TextView textViewTitle;
+        TextView textViewTitle,textViewDepartment;
         ImageView imageIcon;
         public ModuleViewHolder(@NonNull View itemView) {
             super(itemView);
             linearLayout = itemView.findViewById(R.id.LinearLayout);
             imageIcon = itemView.findViewById(R.id.imageIcon);
             textViewTitle = itemView.findViewById(R.id.textTitle);
+            textViewDepartment = itemView.findViewById(R.id.textDepartment);
 
         }
     }

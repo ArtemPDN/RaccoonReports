@@ -4,11 +4,12 @@ import android.graphics.Color;
 
 public class Module {
     int id;
-    String strTitle,strNameImage;
+    String strTitle,strNameImage,strDepartment;
     String colorBG;
 
-    public Module(int id, String strTitle, String strNameImage, String colorBG) {
+    public Module(int id,String strDepartment, String strTitle, String strNameImage, String colorBG) {
         this.id = id;
+        this.strDepartment = strDepartment;
         this.strTitle = strTitle;
         this.strNameImage = strNameImage;
         this.colorBG = colorBG;
@@ -29,4 +30,6 @@ public class Module {
     public String getColorBG() {
         return colorBG;
     }
+
+    public String getStrDepartment() { return strDepartment; }
 }
