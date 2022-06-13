@@ -310,9 +310,10 @@
             android:id="@+id/imageBtnTestConnect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:onClick="testConnection"
             android:paddingLeft="20dp"
             app:srcCompat="@drawable/ic_test_connect_button"
-            android:background="@android:color/transparent"
             tools:layout_editor_absoluteX="229dp"
             tools:layout_editor_absoluteY="629dp" />
     </LinearLayout>
