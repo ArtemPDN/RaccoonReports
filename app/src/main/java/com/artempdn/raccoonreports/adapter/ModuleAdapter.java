@@ -1,6 +1,7 @@
 package com.artempdn.raccoonreports.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.artempdn.raccoonreports.Activity101;
 import com.artempdn.raccoonreports.R;
 import com.artempdn.raccoonreports.module.Module;
 
@@ -42,6 +44,16 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ModuleView
         holder.textViewTitle.setText(moduleViewHolderList.get(position).getStrTitle());
         int imageId = context.getResources().getIdentifier("ic_" + moduleViewHolderList.get(position).getStrNameImage(),"drawable",context.getPackageName());
         holder.imageIcon.setImageResource(imageId);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, Activity101.class);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override

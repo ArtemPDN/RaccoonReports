@@ -11,5 +11,13 @@
     <string name="settingsLogin">Login</string>
     <string name="settingsPass">Password</string>
 
+    <string name="textActivity101">ОМСУ.\nПоиск нарушения сроков</string>
+    <string name="typeTime">Выбор периода</string>
+    <string name="textTimeBegin">С</string>
+    <string name="textTimeEnd">По</string>
+    <string name="date_edit_text_hint">здесь будет дата..</string>
+    <string name="btn_date_text">Дата</string>
+
+
     <string name="forUI">Поиск пропущенных номеров</string>
 </resources>
