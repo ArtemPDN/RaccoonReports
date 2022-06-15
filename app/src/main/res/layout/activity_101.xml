@@ -113,20 +113,19 @@
                     android:textSize="14sp"
                     tools:layout_editor_absoluteX="91dp"
                     tools:layout_editor_absoluteY="264dp" />
+
                 <EditText
                     android:id="@+id/editTextDateActivity101Begin"
-                    android:hint="@string/date_edit_text_hint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="22dp"
-                    android:fontFamily="@font/roboto"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/btn_date"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/btn_date"
+                    android:enabled="false"
+                    android:hint="@string/date_edit_text_hint"
                     android:inputType="date" />
 
                 <Button
@@ -159,13 +158,10 @@
                 <EditText
                     android:id="@+id/editTextDateActivity101End"
                     android:hint="@string/date_edit_text_hint"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="22dp"
-                    android:fontFamily="@font/roboto"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
                     android:layout_alignParentTop="true"
                     android:layout_toLeftOf="@+id/btn_date"
                     android:layout_alignParentLeft="true"

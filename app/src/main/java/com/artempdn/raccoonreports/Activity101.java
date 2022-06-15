@@ -25,14 +25,14 @@ public class Activity101 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_101);
 
-        btnDatePickerBegin = (Button) findViewById(R.id.btn_date_Activity101_Begin);
-        editTextDateBegin = (EditText) findViewById(R.id.editTextDateActivity101Begin);
+        btnDatePickerBegin = findViewById(R.id.btn_date_Activity101_Begin);
+        editTextDateBegin = findViewById(R.id.editTextDateActivity101Begin);
 
-        btnDatePickerBegin.setOnClickListener(this);
+        btnDatePickerBegin.setOnClickListener(this::onClick);
 
     }
 
-    @Override
+    //@Override
     public void onClick(View v) {
         int id = v.getId();
 
@@ -57,10 +57,11 @@ public class Activity101 extends AppCompatActivity {
                 new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        String editTextDateParam = dayOfMonth + "." + (monthOfYear + 1) + "." + year;
+                        String editTextDateParam = String.valueOf(dayOfMonth) + "." + String.valueOf((monthOfYear + 1)) + "." + String.valueOf(year);
                         editTextDateBegin.setText(editTextDateParam);
                     }
                 }, mYear, mMonth, mDay);
         datePickerDialog.show();
+
     }
 }
