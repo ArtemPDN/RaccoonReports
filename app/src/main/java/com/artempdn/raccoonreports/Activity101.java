@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+import com.artempdn.raccoonreports.OtherClass.MyDatePicker;
 
 import java.util.Calendar;
 
@@ -39,29 +42,18 @@ public class Activity101 extends AppCompatActivity {
         switch (id) {
             case R.id.btn_date_Activity101_Begin:
                 // вызываем диалог с выбором даты
-                callDatePicker();
+                MyDatePicker datePicker = new MyDatePicker(this);
+                Log.d("strDateA = ",datePicker.getStrDate());
+                String str = datePicker.getStrDate();
+                Log.e("strDate = ",str);
+                Log.e("Day = ",String.valueOf(datePicker.getmDay()));
+                Log.e("Month = ",String.valueOf(datePicker.getmMonth()));
+                Log.e("Year = ",String.valueOf(datePicker.getmYear()));
+                editTextDateBegin.setText("123");
+                editTextDateBegin.setText(str);
                 break;
 
         }
     }
 
-    private void callDatePicker() {
-        // получаем текущую дату
-        final Calendar cal = Calendar.getInstance();
-        mYear = cal.get(Calendar.YEAR);
-        mMonth = cal.get(Calendar.MONTH);
-        mDay = cal.get(Calendar.DAY_OF_MONTH);
-
-        // инициализируем диалог выбора даты текущими значениями
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        String editTextDateParam = String.valueOf(dayOfMonth) + "." + String.valueOf((monthOfYear + 1)) + "." + String.valueOf(year);
-                        editTextDateBegin.setText(editTextDateParam);
-                    }
-                }, mYear, mMonth, mDay);
-        datePickerDialog.show();
-
-    }
 }
