@@ -3,21 +3,23 @@ package com.artempdn.raccoonreports.OtherClass;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class MyDatePicker {
+public final class MyDatePicker {
 
     int mYear,mMonth,mDay;
     private String strDate="";
+    private EditText mEditText;
 
-    public MyDatePicker(Context context01) {
-        if(callDatePicker(context01)){
-            setStrDate(this.mDay,this.mMonth,this.mYear);
-        }
+    public MyDatePicker(Context context01, EditText view) {
+        mEditText = view;
+        callDatePicker(context01);
     }
 
-    private void setStrDate(int dayOfMonth, int monthOfYear, int year) {
+    private String setStrDate(int dayOfMonth, int monthOfYear, int year) {
         String strDateTempMonth;
         String strDateTempDay;
         if((monthOfYear + 1)>=10){
@@ -31,7 +33,7 @@ public class MyDatePicker {
             strDateTempDay = "0" + String.valueOf(dayOfMonth);
         }
         String str = strDateTempDay + "." + strDateTempMonth + "." + String.valueOf(year);
-        strDate = str;
+        return str;
     }
 
     public String getStrDate() { return strDate; }
@@ -42,7 +44,7 @@ public class MyDatePicker {
 
     public int getmDay() { return mDay; }
 
-    private boolean callDatePicker(Context context) {
+    private void callDatePicker(Context context) {
         // получаем текущую дату
         final Calendar cal = Calendar.getInstance();
         mYear = cal.get(Calendar.YEAR);
@@ -57,14 +59,11 @@ public class MyDatePicker {
                         mDay = dayOfMonth;
                         mMonth = (monthOfYear + 1);
                         mYear = year;
+                        mEditText.setText(setStrDate(mDay,mMonth,mYear));
                     }
                 }, mYear, mMonth, mDay);
         datePickerDialog.show();
-        if(mDay>0){
-            return true;
-        }else {
-            return false;
-        }
+
     }
 
 }
